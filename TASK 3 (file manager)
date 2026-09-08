@@ -1,0 +1,23 @@
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+
+public class FileManager {
+
+    public static void saveBookings(ArrayList<Booking> bookings) {
+        try {
+            FileWriter writer = new FileWriter("bookings.txt");
+
+            for (Booking b : bookings) {
+                writer.write(b.customerName + " - Room " +
+                        b.room.roomNumber + " - ₹" +
+                        b.room.price + "\n");
+            }
+
+            writer.close();
+            System.out.println("Bookings saved to bookings.txt");
+        } catch (IOException e) {
+            System.out.println("Error saving file.");
+        }
+    }
+}
