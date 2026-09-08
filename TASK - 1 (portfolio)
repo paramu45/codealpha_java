@@ -1,0 +1,14 @@
+public class Portfolio {
+
+    Stock stock;
+    int quantity;
+
+    public Portfolio(Stock stock, int quantity) {
+        this.stock = stock;
+        this.quantity = quantity;
+    }
+
+    public double getValue() {
+        return stock.price * quantity;
+    }
+}
