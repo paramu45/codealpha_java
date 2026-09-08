@@ -1,0 +1,18 @@
+import java.util.ArrayList;
+
+public class User {
+
+    String name;
+    double balance;
+
+    ArrayList<Portfolio> portfolio;
+    ArrayList<Transaction> transactions;
+
+    public User(String name, double balance) {
+        this.name = name;
+        this.balance = balance;
+
+        portfolio = new ArrayList<>();
+        transactions = new ArrayList<>();
+    }
+}
