@@ -1,0 +1,26 @@
+public class Transaction {
+
+    String type;
+    String stockName;
+    int quantity;
+    double price;
+
+    public Transaction(String type, String stockName, int quantity, double price) {
+        this.type = type;
+        this.stockName = stockName;
+        this.quantity = quantity;
+        this.price = price;
+    }
+
+    public void displayTransaction() {
+        double total = quantity * price;
+
+        System.out.println(
+                type + " | " +
+                        stockName + " | Qty: " +
+                        quantity + " | Price: ₹" +
+                        price + " | Total: ₹" +
+                        total
+        );
+    }
+}
