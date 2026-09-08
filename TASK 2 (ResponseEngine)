@@ -1,0 +1,24 @@
+public class ResponseEngine {
+
+    public String getResponse(String message) {
+        message = message.toLowerCase();
+
+        if (message.contains("hello") || message.contains("hi"))
+            return "Hello! How can I help you?";
+
+        else if (message.contains("java"))
+            return "Java is an Object-Oriented Programming language.";
+
+        else if (message.contains("ai"))
+            return "AI means Artificial Intelligence.";
+
+        else if (message.contains("college"))
+            return "Study well and complete your project!";
+
+        else if (message.contains("bye"))
+            return "Goodbye! Have a nice day.";
+
+        else
+            return "Sorry, I don't understand. Ask another question.";
+    }
+}
