@@ -1,0 +1,18 @@
+public class Booking {
+
+    String customerName;
+    Room room;
+
+    public Booking(String customerName, Room room) {
+        this.customerName = customerName;
+        this.room = room;
+    }
+
+    public void displayBooking() {
+        System.out.println("----- Booking Details -----");
+        System.out.println("Customer : " + customerName);
+        System.out.println("Room No  : " + room.roomNumber);
+        System.out.println("Category : " + room.category);
+        System.out.println("Price    : ₹" + room.price);
+    }
+}
